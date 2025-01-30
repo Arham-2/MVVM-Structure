@@ -13,6 +13,12 @@
 		B79FEE652D4B57E10060555E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B79FEE642D4B57E10060555E /* Base */; };
 		B79FEE672D4B57E20060555E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B79FEE662D4B57E20060555E /* Assets.xcassets */; };
 		B79FEE6A2D4B57E20060555E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B79FEE692D4B57E20060555E /* Base */; };
+		B79FEE732D4B5DB40060555E /* PersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79FEE722D4B5DB40060555E /* PersonCell.xib */; };
+		B79FEE742D4B5DB40060555E /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79FEE712D4B5DB40060555E /* PersonCell.swift */; };
+		B79FEE762D4B62CA0060555E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79FEE752D4B62CA0060555E /* Person.swift */; };
+		B79FEE782D4B63050060555E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79FEE772D4B63050060555E /* APIService.swift */; };
+		B79FEE7A2D4B67AF0060555E /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79FEE792D4B67AF0060555E /* PeopleViewModel.swift */; };
+		B7A93E932D50C8EC002E223A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A93E922D50C8EC002E223A /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		B79FEE662D4B57E20060555E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B79FEE692D4B57E20060555E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B79FEE6B2D4B57E20060555E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B79FEE712D4B5DB40060555E /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		B79FEE722D4B5DB40060555E /* PersonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCell.xib; sourceTree = "<group>"; };
+		B79FEE752D4B62CA0060555E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B79FEE772D4B63050060555E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		B79FEE792D4B67AF0060555E /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		B7A93E922D50C8EC002E223A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,12 @@
 				B79FEE662D4B57E20060555E /* Assets.xcassets */,
 				B79FEE682D4B57E20060555E /* LaunchScreen.storyboard */,
 				B79FEE6B2D4B57E20060555E /* Info.plist */,
+				B79FEE712D4B5DB40060555E /* PersonCell.swift */,
+				B79FEE722D4B5DB40060555E /* PersonCell.xib */,
+				B79FEE752D4B62CA0060555E /* Person.swift */,
+				B79FEE772D4B63050060555E /* APIService.swift */,
+				B79FEE792D4B67AF0060555E /* PeopleViewModel.swift */,
+				B7A93E922D50C8EC002E223A /* DetailViewController.swift */,
 			);
 			path = "MVVM Structure";
 			sourceTree = "<group>";
@@ -127,6 +145,7 @@
 			files = (
 				B79FEE672D4B57E20060555E /* Assets.xcassets in Resources */,
 				B79FEE6A2D4B57E20060555E /* Base in Resources */,
+				B79FEE732D4B5DB40060555E /* PersonCell.xib in Resources */,
 				B79FEE652D4B57E10060555E /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +157,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B79FEE762D4B62CA0060555E /* Person.swift in Sources */,
 				B79FEE622D4B57E10060555E /* ViewController.swift in Sources */,
 				B79FEE5E2D4B57E10060555E /* AppDelegate.swift in Sources */,
+				B79FEE742D4B5DB40060555E /* PersonCell.swift in Sources */,
+				B79FEE7A2D4B67AF0060555E /* PeopleViewModel.swift in Sources */,
+				B79FEE782D4B63050060555E /* APIService.swift in Sources */,
 				B79FEE602D4B57E10060555E /* SceneDelegate.swift in Sources */,
+				B7A93E932D50C8EC002E223A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
