@@ -73,7 +73,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UISearchResultsUpda
         let searchBar = searchController.searchBar
         let searchText = searchBar.text!
 
-        viewModel.filterForSearchTextAndScopeButton(searchText: searchText)
+        viewModel.filterForSearchTextAndScopeButton(searchText: searchText, isSearching: searchController.isActive)
         tableView.reloadData()
 
     }
@@ -82,7 +82,7 @@ class ViewController: UIViewController, UISearchBarDelegate, UISearchResultsUpda
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let person1 = viewModel.people[indexPath.row]
+        let person1 = viewModel.filteredPersons[indexPath.row]
        if let detailsVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
           detailsVC.selectedName = person1.name
           detailsVC.selectedId = "\(person1.id)"
@@ -101,34 +101,15 @@ extension ViewController: UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        if(searchController.isActive)
-        {
-            return viewModel.filteredPerson.count
-            
-        }
-        return viewModel.people.count
+        return viewModel.filteredPersons.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell",
                                                  for: indexPath) as! PersonCell
         
-        let person1: Person!
-        
-        if(searchController.isActive)
-        {
-            person1 = viewModel.filteredPerson[indexPath.row]
-
-
-        }
-        else{
-            person1 = viewModel.people[indexPath.row]
-        }
-        
+        let person1 = viewModel.filteredPersons[indexPath.row]
         cell.configureCell(person: person1)
-
-        
         return cell
     }
     
