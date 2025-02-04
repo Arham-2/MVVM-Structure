@@ -24,7 +24,8 @@ class PeopleViewModel {
         apiService.fetchPeople { [weak self] result in
             switch result {
             case .success(let people):
-                self?.allPersons = people   // Assigning People Data to allPersons Array after success in fetching data. from API
+                // Assigning People Data to allPersons Array after success in fetching data. from API
+                self?.allPersons = people
                 self?.filteredPersons = people
                 self?.didFetchData?()
             case .failure(let error):
@@ -34,12 +35,14 @@ class PeopleViewModel {
     }
     func filterForSearchText(searchText: String, isSearching: Bool) {
         if isSearching && !searchText.isEmpty {
-            filteredPersons = allPersons.filter() { // Function to search the Person based on  name, username and email. Also compare from the searchText.
+            // Function to search the Person based on  name, username and email. Also compare from the searchText.
+            filteredPersons = allPersons.filter() {
                  $0.name.lowercased().contains(searchText.lowercased()) ||
                 $0.username.lowercased().contains(searchText.lowercased()) ||
                 $0.email.lowercased().contains(searchText.lowercased())
             }
         }
+        // It is important to display all persons when the searchText is empty.
         else {
             filteredPersons = allPersons
         }

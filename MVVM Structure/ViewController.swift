@@ -91,8 +91,8 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell",
                                                  for: indexPath) as! PersonCell
-        let persons = viewModel.filteredPersons[indexPath.row]
-        cell.configureCell(person: persons)
+        let person = viewModel.filteredPersons[indexPath.row]
+        cell.configureCell(person: person)
         return cell
     }
     
